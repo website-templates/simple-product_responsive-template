@@ -16,12 +16,12 @@ Screenshots
 ---
 **Width 1440px (without scrollbar)**
 
-![simple-product template 1440px](screenshots/simple-product_website-template_1440px.jpg)
+![simple-product fluid template 1440px](screenshots/simple-product_website-template_1440px.jpg)
 
 ---
 
 
-**Width 960px (without scrollbar)**
+**Width 640px (without scrollbar)**
 
 ![simple-product fluid template 640px](screenshots/simple-product_website-template_640px.jpg)
 
