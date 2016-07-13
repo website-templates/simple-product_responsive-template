@@ -1,0 +1,89 @@
+extends ../layouts/base
+
+block variables
+	- pageTitle = 'Home'
+	- pageDescription = 'Page-specific description'
+	- pageKeywords = 'Page-specific keywords'
+
+
+block body-content
+	input#nav-check.nav-check(type='checkbox')
+	header
+		.container
+			label.nav-icon(for='nav-check'): i.fa.fa-bars
+			h1.logo Prechu
+			nav
+				a.nav_link(href='#') Home
+				a.nav_link.marked(href='#') Products
+				a.nav_link(href='#') Services
+				a.nav_link(href='#') Contacts
+
+	section.promo
+		.container
+			input#button-one.slider_radio(type='radio', name='controls', checked='checked')
+			label.slider_control(for='button-one')
+			input#button-two.slider_radio(type='radio', name='controls')
+			label.slider_control(for='button-two')
+			input#button-three.slider_radio(type='radio', name='controls')
+			label.slider_control(for='button-three')
+
+			ul.slider
+				li#slide-one.slide
+					figure.slide_image
+						img(src='static/images/iphone.png', alt='Some picture')
+						figcaption Lorem Ipsum is simply
+					.slide_info
+						h1.slide_title Lorem Ipsum is simply
+						h2.slide_text dummy text of the
+						h2.slide_text printing &amp; typesetting
+						a.slide_link(href='#') Sign up now
+				li#slide-two.slide
+					figure.slide_image
+						img(src='static/images/iphone.png', alt='Some picture')
+						figcaption Lorem Ipsum is simply
+					.slide_info
+						h1.slide_title Lorem Ipsum is simply
+						h2.slide_text dummy text of the
+						h2.slide_text printing &amp; typesetting
+						a.slide_link(href='#') Sign up now
+				li#slide-three.slide
+					figure.slide_image
+						img(src='static/images/iphone.png', alt='Some picture')
+						figcaption Lorem Ipsum is simply
+					.slide_info
+						h1.slide_title Lorem Ipsum is simply
+						h2.slide_text dummy text of the
+						h2.slide_text printing &amp; typesetting
+						a.slide_link(href='#') Sign up now
+
+	section.services
+		.container
+			.service.info
+				h3.service_title Contrary to popular
+				p.service_text Lorem Ipsum is not simply random text.
+				p.service_text It has roots in a piece
+			.service.production
+				h3.service_title Contrary to popular
+				p.service_text Lorem Ipsum is not simply random text.
+				p.service_text It has roots in a piece
+			.service.proposal
+				h3.service_title Contrary to popular
+				p.service_text Lorem Ipsum is not simply random text.
+				p.service_text It has roots in a piece
+
+	section.product
+		.container
+			h1.product_title The Shopping cart
+			a.product_card(href='#') The Shopping cart
+			.product_info
+				h2.product_slogan Some Bullet text here
+				p.product_text Lorem Ipsum is simply dummy text of the printing and typesetting
+				p.product_text Lorem Ipsum has been the industry&apos;s standard dummy text ever
+				p.product_text When an unknown printer took a galley of type and scrambled
+				p.product_text It to make a type specimen book. It has survived not only five centuries
+				p.product_text But also the leap into electronic typesetting
+				p.product_text Remaining essentially unchanged. It was popularised
+				p.product_text The release of Letraset sheets containing Lorem Ipsum passages
+
+	footer
+		p.copyright Designed by cssauthor.com | Coded by orlovmax.com
