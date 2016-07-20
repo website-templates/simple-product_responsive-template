@@ -1,0 +1,47 @@
+////////////////////////////////////////
+// $Page navigation
+////////////////////////////////////////
+
+//////////////////////////////////////// Block variables
+
+
+//////////////////////////////////////// Block mixins and functions
+
+
+//////////////////////////////////////// Block styles
+$block: ".page-nav"
+
+#{$block}
+	width: 100%
+
+
+	// $Page navigation link
+	&__link
+		margin: 0 20px
+		padding-bottom: 35px
+		border-bottom: 6px solid #5094f2
+		line-height: 90px
+		color: #6c6c6c
+		transition: all .4s
+
+		@media screen and (max-width:800px)
+			display: inline-block
+			margin: 0 0 0 -5px
+			padding: 10px 20px
+			border-bottom: none
+			line-height: 1
+
+		// $Page navigation STATE: highlighted link
+		&.is-highlighted
+			padding-bottom: 27px
+
+			@media screen and (max-width:800px)
+				padding-bottom: 10px
+				background-color: darken(#fff, 7%)
+
+		&:not(.is-highlighted):hover
+			padding-bottom: 27px
+
+			@media screen and (max-width:800px)
+					padding-bottom: 10px
+					background-color: darken(#fff, 7%)

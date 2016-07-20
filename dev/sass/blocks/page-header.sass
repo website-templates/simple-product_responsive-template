@@ -1,0 +1,113 @@
+////////////////////////////////////////
+// $Page header
+////////////////////////////////////////
+
+//////////////////////////////////////// Block variables
+
+
+//////////////////////////////////////// Block mixins and functions
+
+
+//////////////////////////////////////// Block styles
+$block: ".page-header"
+
+#{$block}
+	position: relative
+	width: 100%
+	min-height: 90px
+	overflow: hidden
+
+	@media screen and (max-width:800px)
+		padding: 0 30px
+		overflow: visible
+
+
+	// $Page header inner container
+	&__inner
+		max-width: 1024px
+		margin: 0 auto
+		+clearfix()
+
+
+	// $Page header logo
+	&__logo
+		float: left
+		margin-top: 20px
+		color: #6c6c6c
+
+		@media screen and (max-width:800px)
+			width: 100%
+
+		&:before
+			content: "\201C"
+			display: inline-block
+			width: 45px
+			height: 45px
+			margin-right: 10px
+			padding-top: 5px
+			background-color: #5094f2
+			font-family: serif
+			font-size: 65px
+			color: #fff
+			text-align: center
+			vertical-align: top
+			border-radius: 50%
+			box-sizing: border-box
+
+
+	// $Page header navigation
+	&__nav
+		float: right
+		white-space: nowrap
+
+		@media screen and (max-width:800px)
+			position: absolute
+			float: none
+			width: 100%
+			left: 0
+			margin-top: 90px
+			z-index: 100
+			background-color: #fff
+			border-top: 1px solid #ddd
+			border-bottom: 1px solid #ddd
+			white-space: normal
+			text-align: center
+			overflow: hidden
+			opacity: 0
+			transition: opacity .5s
+
+			// $Page header navigation CONTEXT: $Page header hiden checkbox STATE: checked
+			#{$block}__nav-check:checked ~ &
+				opacity: 1
+
+
+	// $Page header hidden checkbox
+	&__nav-check
+		display: none
+
+
+	// $Page header navicon
+	&__nav-icon
+		display: none
+		position: absolute
+		width: 60px
+		height: 45px
+		margin-top: 20px
+		right: 20px
+		z-index: 5
+		background-color: #5094f2
+		border-radius: 3px
+		color: white
+		text-align: center
+		cursor: pointer
+		transition: all .4s
+
+		&:hover
+			background-color: darken(#5094f2, 10%)
+
+		& i:before
+			font-size: 40px
+			line-height: 45px
+
+		@media screen and (max-width:800px)
+			display: inline-block
