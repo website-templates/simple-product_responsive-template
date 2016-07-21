@@ -305,6 +305,77 @@ body {
 	clear: both;
 }
 
+.services {
+	position: relative;
+	width: 100%;
+	min-height: 350px;
+	text-align: center;
+}
+
+.services:before {
+	content: "";
+	display: block;
+	width: 100%;
+	height: 8px;
+	margin-top: -8px;
+	background: url("../images/border.png") 0 0 repeat-x;
+}
+
+.services__inner {
+	max-width: 1024px;
+	margin: 0 auto;
+}
+
+.services__inner:after {
+	content: '';
+	display: table;
+	clear: both;
+}
+
+.services__item {
+	float: left;
+	width: 33.33333%;
+	margin-left: 0;
+	margin-right: 0;
+	margin-top: 65px;
+	margin-bottom: 90px;
+	padding: 5px;
+}
+
+.services__item:before {
+	content: "";
+	display: inline-block;
+	width: 185px;
+	height: 185px;
+	background: url("../images/services-sprite.png") 0 center no-repeat;
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+}
+
+.services__item_info:before {
+	background-color: #5094f2;
+	background-position: 0 center;
+}
+
+.services__item_production:before {
+	background-color: #d94748;
+	background-position: -185px center;
+}
+
+.services__item_proposal:before {
+	background-color: #ebbb11;
+	background-position: -370px center;
+}
+
+.services__title {
+	margin: 25px auto 10px;
+	color: #5094f2;
+}
+
+.services__text {
+	margin-bottom: 5px;
+}
+
 .slider {
 	width: 100%;
 }
@@ -518,6 +589,54 @@ body {
 .promo {
 	height: 280px;
 	padding: 0 20px;
+}
+
+.services {
+	text-align: left;
+}
+
+.services__item {
+	float: none;
+	width: 100%;
+	margin-top: 0;
+	margin-bottom: 0;
+	padding: 40px 5px 20px;
+	border-bottom: 1px solid #ddd;
+}
+
+.services__item:after {
+	content: '';
+	display: table;
+	clear: both;
+}
+
+.services__item:before {
+	content: "";
+	float: left;
+	width: 135px;
+	height: 135px;
+	margin: 0 25px 0 45px;
+}
+
+.services__item_info:before {
+	background-position: -25px center;
+}
+
+.services__item_production:before {
+	background-position: -205px center;
+}
+
+.services__item_proposal:before {
+	background-position: -395px center;
+}
+
+.services__title {
+	font-size: 35px;
+	margin: 15px auto 10px;
+}
+
+.services__text {
+	font-size: 20px;
 }
 
 .slider__radio#button-two:checked ~ .slider__items {
