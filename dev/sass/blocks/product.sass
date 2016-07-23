@@ -1,75 +1,86 @@
 ////////////////////////////////////////
-// $Block name
+// $Product
 ////////////////////////////////////////
 
 //////////////////////////////////////// Block variables
-
-// Colors
 
 
 //////////////////////////////////////// Block mixins and functions
 
 
 //////////////////////////////////////// Block styles
-$block: ".block-name"
+$block: ".product"
 
 #{$block}
-// 	.product
-// 		width: 100%
-// 		min-height: 400px
+	width: 100%
+	min-height: 400px
 
-// 		.product_title
-// 			.column(1,1,2,0)
-// 			margin-bottom: 15px
-// 			color: #6f7173
-
-// 		.product_card
-// 			display: block
-// 			height: 280px
-// 			.column(2,5,2,0)
-// 			margin-top: 25px
-// 			background: url("../img/basket.png") center 0 no-repeat
-// 			.bg-contain
-// 			.hidentext
-// 			.transition(all, .5s)
-
-// 			&:hover
-// 				.scale(1.1)
+	@media screen and (max-width:800px)
+		padding: 45px
 
 
-// 		.product_info
-// 			.column(3,5,2,0)
-
-// 			.product_slogan
-// 				margin-bottom: 10px
-// 				color: #6f7173
-// 				line-height: 45px
-
-// 			.product_text
-// 				line-height: 36px
+	// $Product inner container
+	&__inner
+		max-width: 1024px
+		margin: 0 auto
+		+clearfix()
 
 
-// @media screen and (max-width:800px)
+	// $Product title
+	&__title
+		margin-bottom: 15px
+		color: #6f7173
+		+gs-column(1,1,0)
 
-// 	.product
-// 		padding: 45px
+		@media screen and (max-width:800px)
+			margin-bottom: 0
+			text-align: center
+			+gs-column(1,1,0)
 
-// 		.product_title
-// 			.column(1,1,0,0)
-// 			margin-bottom: 0
-// 			text-align: center
 
-// 		.product_card
-// 			height: 165px
-// 			.column(1,1,0,0)
-// 			margin: 40px 0 10px
+	// $Product card
+	&__card
+		display: block
+		height: 280px
+		margin-top: 25px
+		background: url("../images/basket.png") center 0 no-repeat
+		background-size: contain
+		font-size: 0
+		color: transparent
+		transition: all .5s
+		+gs-column(2,5,0)
 
-// 		.product_info
-// 			.column(1,1,0,0)
+		@media screen and (max-width:800px)
+			height: 165px
+			margin: 40px 0 10px
+			+gs-column(1,1,0,0)
 
-// 			.product_slogan
-// 				margin-bottom: 10px
-// 				font-size: 35px
+		&:hover
+			transform: scale(1.1)
 
-// 			.product_text
-// 				font-size: 16px
+
+	// $Product info
+	&__info
+		+gs-column(3,5,0)
+
+		@media screen and (max-width:800px)
+			+gs-column(1,1,0)
+
+
+	// $Product slogan
+	&__slogan
+		margin-bottom: 10px
+		color: #6f7173
+		line-height: 45px
+
+		@media screen and (max-width:800px)
+			margin-bottom: 10px
+			font-size: 35px
+
+
+	// $Product text
+	&__text
+		line-height: 36px
+
+		@media screen and (max-width:800px)
+			font-size: 16px
