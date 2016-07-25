@@ -142,7 +142,7 @@ Grunt: `gulp build`
 Regenerate and build project by running all tasks.
 Grunt: `gulp rebuild`
 
-* Compile Stylus stylesheets
+* Compile Sass stylesheets
 * Add vendor prefixes in css
 * Combine media queries in css files
 * Compile Pug templates
