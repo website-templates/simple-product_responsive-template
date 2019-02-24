@@ -12,103 +12,103 @@
 $block: ".services"
 
 #{$block}
-	position: relative
-	width: 100%
-	min-height: 350px
-	text-align: center
+  position: relative
+  width: 100%
+  min-height: 350px
+  text-align: center
 
-	@media screen and (max-width:800px)
-		text-align: left
+  @media screen and (max-width: 960px)
+    text-align: left
 
-	&:before
-		content: ""
-		display: block
-		width: 100%
-		height: 8px
-		margin-top: -8px
-		background: url("../images/border.png") 0 0 repeat-x
-
-
-	// $Services inner container
-	&__inner
-		max-width: 1024px
-		margin: 0 auto
-		+clearfix()
+  &:before
+    content: ""
+    display: block
+    width: 100%
+    height: 8px
+    margin-top: -8px
+    background: url("../images/border.png") 0 0 repeat-x
 
 
-	// $Services item
-	&__item
-		+gs-column(1,3,0)
-		margin-top: 65px
-		margin-bottom: 90px
-		padding: 5px
-
-		@media screen and (max-width:800px)
-			float: none
-			width: 100%
-			margin-top: 0
-			margin-bottom: 0
-			padding: 40px 5px 20px
-			border-bottom: 1px solid #ddd
-			+clearfix()
-
-		&:before
-			content: ""
-			display: inline-block
-			width: 185px
-			height: 185px
-			background: url("../images/services-sprite.png") 0 center no-repeat
-			border-radius: 50%
-
-			@media screen and (max-width:800px)
-				content: ""
-				float: left
-				width: 135px
-				height: 135px
-				margin: 0 25px 0 45px
-
-		// $Services item MOD: info
-		&_info
-			&:before
-				background-color: #5094f2
-				background-position: 0 center
-
-				@media screen and (max-width:800px)
-					background-position: -25px center
-
-		// $Services item MOD: production
-		&_production
-			&:before
-				background-color: #d94748
-				background-position: -185px center
-
-				@media screen and (max-width:800px)
-					background-position: -205px center
-
-		// $Services item MOD: proposal
-		&_proposal
-			&:before
-				background-color: #ebbb11
-				background-position: -370px center
-
-				@media screen and (max-width:800px)
-					background-position: -395px center
+  // $Services inner container
+  &__inner
+    max-width: 1024px
+    margin: 0 auto
+    +clearfix()
 
 
-	// $Services title
-	&__title
-		margin: 25px auto 10px
-		color: #5094f2
+  // $Services item
+  &__item
+    +gs-column(1,3,0)
+    margin-top: 65px
+    margin-bottom: 90px
+    padding: 5px
 
-		@media screen and (max-width:800px)
-			font-size: 35px
-			margin: 15px auto 10px
+    @media screen and (max-width: 960px)
+      float: none
+      width: 100%
+      margin-top: 0
+      margin-bottom: 0
+      padding: 40px 5px 20px
+      border-bottom: 1px solid #ddd
+      +clearfix()
+
+    &:before
+      content: ""
+      display: inline-block
+      width: 185px
+      height: 185px
+      background: url("../images/services-sprite.png") 0 center no-repeat
+      border-radius: 50%
+
+      @media screen and (max-width: 960px)
+        content: ""
+        float: left
+        width: 135px
+        height: 135px
+        margin: 0 25px 0 45px
+
+      @media screen and (max-width:640px)
+        margin-left: 10px
+
+    // $Services item MOD: info
+    &_info
+      &:before
+        background-color: #5094f2
+        background-position: 0 center
+
+        @media screen and (max-width: 960px)
+          background-position: -25px center
+
+    // $Services item MOD: production
+    &_production
+      &:before
+        background-color: #d94748
+        background-position: -185px center
+
+        @media screen and (max-width: 960px)
+          background-position: -205px center
+
+    // $Services item MOD: proposal
+    &_proposal
+      &:before
+        background-color: #ebbb11
+        background-position: -370px center
+
+        @media screen and (max-width: 960px)
+          background-position: -395px center
 
 
-	// $Services text
-	&__text
-		margin-bottom: 5px
+  // $Services title
+  &__title
+    margin: 25px auto 10px
+    color: #5094f2
 
-		@media screen and (max-width:800px)
-			font-size: 20px
+    @media screen and (max-width: 960px)
+      font-size: 25px
+      margin: 15px auto 0
+
+
+  // $Services text
+  &__text
+    margin-bottom: 5px
 
