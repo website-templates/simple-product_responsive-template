@@ -11,7 +11,11 @@ gulp.task('postcss:dev', function () {
   var processors = [
     autoprefixer({
       browsers: [
-        'last 4 versions'
+        '> 1%',
+        'last 30 versions',
+        'Opera 12.1',
+        'Explorer > 7',
+        'Safari >= 5'
       ],
       cascade: true
     })
